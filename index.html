@@ -568,6 +568,7 @@ body.opened .hero-anim>*:nth-child(6){transition-delay:2.4s}
     <p class="body-es reveal d2" style="margin-top:20px">Vuestra presencia será nuestro mejor regalo.</p>
     <p class="body-ar reveal d2" lang="ar">حضوركم هو أجمل هدية لنا، وبكم تكتمل فرحتنا.</p>
     <div class="sign reveal d3">Jesús &amp; Rachida</div>
+    <p style="position:relative;z-index:1;margin-top:46px;font:italic .8rem var(--serif);color:rgba(236,211,160,.45)">♪ Romance Anónimo — guitarra: Jim Greeninger (CC0)</p>
   </section>
 </main>
 
@@ -684,7 +685,12 @@ const env = $('#envelope');
 let opened = false;
 function openEnvelope() {
   if (opened) return; opened = true;
-  if (WEDDING.music) audio.play().catch(() => {});
+  if (WEDDING.music) {               // gentle fade-in
+    audio.volume = 0;
+    audio.play().then(() => {
+      const fade = setInterval(() => { audio.volume = Math.min(.8, audio.volume + .04); if (audio.volume >= .8) clearInterval(fade); }, 150);
+    }).catch(() => {});
+  }
   if (navigator.vibrate) navigator.vibrate(30);
   env.classList.add('opening');
   setTimeout(() => env.classList.add('open2'), 900);
