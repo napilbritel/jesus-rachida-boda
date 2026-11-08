@@ -175,6 +175,40 @@ body.opened .hero-anim>*:nth-child(5){transition-delay:2.3s}
 .btn .lbl{display:flex;flex-direction:column;align-items:flex-start;line-height:1.25;text-align:left}
 .btn .lbl [lang=ar]{font:400 .95rem var(--ar)}
 
+/* programme: the evening turns into night */
+#programa{padding:84px 18px 90px;background:linear-gradient(180deg,var(--paper) 0%,#efe3d4 38%,#9a5a4c 72%,#4a221c 90%,var(--choc) 100%)}
+#programa .stars{position:absolute;left:0;right:0;bottom:0;height:34%;pointer-events:none;opacity:.8;
+  background-image:radial-gradient(1.4px 1.4px at 12% 20%,#fff6e0,transparent),radial-gradient(1px 1px at 30% 60%,#fff6e0,transparent),radial-gradient(1.6px 1.6px at 52% 30%,#fff6e0,transparent),radial-gradient(1px 1px at 70% 75%,#fff6e0,transparent),radial-gradient(1.3px 1.3px at 86% 40%,#fff6e0,transparent),radial-gradient(1px 1px at 8% 85%,#fff6e0,transparent),radial-gradient(1.2px 1.2px at 44% 90%,#fff6e0,transparent),radial-gradient(1px 1px at 93% 88%,#fff6e0,transparent);animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{50%{opacity:.35}}
+.prog-head .who{font:700 1.15rem var(--ruqaa);color:var(--wine);margin-top:14px}
+.prog-head .who span{font:400 1.5rem var(--script);color:var(--wine)}
+.prog-head .when{font:500 .95rem var(--serif);letter-spacing:.12em;color:var(--muted);margin-top:4px}
+.prog-head .when[lang=ar]{font:400 1.05rem var(--ar);letter-spacing:0;margin-top:0}
+.prog{position:relative;margin:38px auto 0;max-width:430px;padding-left:66px;text-align:left}
+.prog .rail{position:absolute;left:33px;top:30px;bottom:30px;width:1px;background:linear-gradient(var(--line),var(--copper) 60%,var(--copper-l))}
+#pmarker{position:absolute;left:33px;top:0;width:30px;height:30px;transform:translate(-50%,-50%);z-index:3;transition:top .25s linear;filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}
+.pi{position:relative;margin-bottom:18px}
+.pi .medal{position:absolute;left:-59px;top:10px;width:52px;height:52px;border-radius:50%;background:var(--cream);border:1px solid var(--copper);
+  display:grid;place-items:center;color:var(--copper-d);box-shadow:0 0 0 5px rgba(251,247,241,.35);transition:background .5s,color .5s;z-index:2}
+.pi .medal svg{width:24px;height:24px}
+.pi.on .medal{background:var(--wine);color:var(--copper-l);border-color:var(--copper-l)}
+.pi .card{background:rgba(253,250,246,.9);border:1px solid rgba(184,154,120,.45);border-radius:4px 22px 4px 22px;padding:13px 16px 12px;box-shadow:0 8px 20px rgba(60,30,20,.10)}
+.pi.special .card{border-color:var(--copper);box-shadow:0 8px 24px rgba(94,26,43,.16),inset 0 0 0 3px rgba(200,138,86,.10)}
+.pi .time{font:600 1.45rem/1 var(--serif);color:var(--wine);font-variant-numeric:lining-nums}
+.pi .time small{font-size:.65em;color:var(--muted);margin-left:2px}
+.pi .tag{float:right;font:600 .62rem var(--serif);letter-spacing:.14em;text-transform:uppercase;color:var(--copper-d);border:1px solid rgba(200,138,86,.6);border-radius:20px;padding:3px 8px;margin-top:2px}
+.pi .t-es{font:600 1.1rem/1.25 var(--serif);color:var(--ink);margin-top:6px}
+.pi .d-es{font:italic 400 1rem/1.45 var(--serif);color:var(--muted);margin-top:2px}
+.pi .ar-wrap{direction:rtl;text-align:right;border-top:1px dashed rgba(184,154,120,.5);margin-top:9px;padding-top:7px}
+.pi .t-ar{font:700 1.05rem/1.5 var(--ar);color:var(--copper-d)}
+.pi .d-ar{font:400 .98rem/1.7 var(--ar);color:var(--muted)}
+.pi.end .card{background:var(--wine);border-color:var(--copper);text-align:center}
+.pi.end .time,.pi.end .t-es{color:var(--copper-l)} .pi.end .time small{color:#d9b99a}
+.pi.end .t-ar{color:var(--copper-l)} .pi.end .ar-wrap{text-align:center;border-color:rgba(239,199,154,.3)}
+.thanks{margin-top:34px;color:#f0dcc2;position:relative}
+.thanks .es{font:400 1.75rem/1.25 var(--script);color:var(--copper-l)}
+.thanks .ar{font:400 1.15rem/1.8 var(--ar);margin-top:6px}
+
 /* closing */
 #final{background-color:var(--choc);color:var(--copper-l);padding:96px 26px 70px;background-image:var(--emboss),var(--grain);background-size:120px 160px,200px 200px}
 #final::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(94,40,30,.25),rgba(15,5,3,.85));pointer-events:none}
@@ -479,9 +513,9 @@ body.opened .hero-anim>*:nth-child(5){transition-delay:2.3s}
           <div class="es">A las seis de la tarde</div><div class="ar" lang="ar">السادسة مساءً</div></div>
       </div>
       <div class="ev reveal">
-        <div class="big">23:00<small>h</small></div>
+        <div class="big">00:00<small>h</small></div>
         <div class="txt"><div class="lab">Cena · <span lang="ar">العشاء</span></div>
-          <div class="es">A las once de la noche</div><div class="ar" lang="ar">الحادية عشرة ليلاً</div></div>
+          <div class="es">Cena de celebración a medianoche</div><div class="ar" lang="ar">عشاء الحفل عند منتصف الليل</div></div>
       </div>
       <div class="ev reveal">
         <div class="big">Fez<small>Marruecos</small></div>
@@ -542,6 +576,26 @@ body.opened .hero-anim>*:nth-child(5){transition-delay:2.3s}
     </a>
   </section>
 
+  <!-- PROGRAMME -->
+  <section id="programa" class="torn">
+    <div class="stars"></div>
+    <div class="prog-head reveal">
+      <div class="h-es">Programa de la boda</div>
+      <div class="h-ar" lang="ar">برنامج حفل الزفاف</div>
+      <svg class="flourish"><use href="#flourishS"/></svg>
+      <div class="who"><span lang="ar">عيسى و رشيدة</span> &nbsp;|&nbsp; <span>Jesús &amp; Rachida</span></div>
+      <div class="when">Domingo, 6 de diciembre de 2026</div><div class="when" lang="ar">الأحد 6 دجنبر 2026</div>
+    </div>
+    <div class="prog" id="prog">
+      <div class="rail"></div>
+      <svg id="pmarker" viewBox="-50 -50 100 100"><use href="#rose" x="-50" y="-50" width="100" height="100"/></svg>
+    </div>
+    <div class="thanks reveal">
+      <div class="es">Gracias por acompañarnos en uno de los días más especiales de nuestras vidas.</div>
+      <div class="ar" lang="ar">شكراً لمشاركتكم إيانا أحد أجمل أيام حياتنا.</div>
+    </div>
+  </section>
+
   <!-- CLOSING -->
   <section id="final">
     <div class="reveal">
@@ -576,7 +630,7 @@ body.opened .hero-anim>*:nth-child(5){transition-delay:2.3s}
 /* ✏️ EDITA AQUÍ · عدّل هنا */
 const WEDDING = {
   date: '2026-12-06T18:00:00',
-  durationHours: 7,
+  durationHours: 10,
   venue: 'Palais Benjelloun, Fez',
   mapQuery: 'Palais Benjelloun Fès',
   music: 'music.mp3',
@@ -641,6 +695,48 @@ function use(parent, id, x, y, size, rot = 0, extra = {}) {
   [44, 92, 132, 150, 180, 198, 238, 286].forEach(x => { c += `<rect x="${x - 4}" y="56" width="8" height="62"/><rect x="${x - 7}" y="54" width="14" height="4"/><rect x="${x - 7}" y="114" width="14" height="4"/>`; });
   $('#cols').innerHTML = c;
 })();
+
+/* programme */
+const ICON = {
+  door: '<path d="M5 21V10a7 7 0 0 1 14 0v11M3 21h18M9 21v-6a3 3 0 0 1 6 0v6"/>',
+  rings: '<circle cx="9" cy="14.5" r="5"/><circle cx="15" cy="14.5" r="5"/><path d="M15 9.5l-2-2.5 2-2 2 2z"/>',
+  glasses: '<path d="M5 3h5l-.4 5a2.1 2.1 0 0 1-4.2 0zM7.5 10.2V19M5 19h5M14 3h5l-.4 5a2.1 2.1 0 0 1-4.2 0zM16.5 10.2V19M14 19h5"/>',
+  music: '<path d="M9 18V5l10-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/>',
+  tayfor: '<path d="M3 20h18M5 17h14M6 17a6 6 0 0 1 12 0M12 11V8.5M10.6 8.5h2.8M5 17v3M19 17v3"/><path d="M9 14c1-1.5 5-1.5 6 0"/>',
+  dinner: '<circle cx="13" cy="12" r="6"/><circle cx="13" cy="12" r="3.4"/><path d="M3 4v4.5a1.5 1.5 0 0 0 3 0V4M4.5 9v11M21.5 4c-1.6 1-1.6 6 0 7v9"/>',
+  cake: '<path d="M5 21v-7h14v7M3 21h18M7 14v-3h10v3M12 11V8.5M12 6.5a1 1 0 0 0 1-1c0-1-1-2.3-1-2.3s-1 1.3-1 2.3a1 1 0 0 0 1 1zM5 17c2 1 3-1 4.6 0s3 1 4.6 0 3-1 4.8 0"/>',
+  spark: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8zM5 2.5l.6 1.4 1.4.6-1.4.6L5 6.5l-.6-1.4L3 4.5l1.4-.6z"/>',
+  moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/><path d="M17 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z"/>',
+};
+const PROGRAM = [
+  { t: '18:00', i: 'door', es: 'Recepción de invitados', des: 'Bienvenida y recepción de los invitados al salón de celebraciones.',
+    ar: 'استقبال الضيوف', dar: 'الترحيب بالضيوف واستقبالهم في قاعة الحفل.' },
+  { t: '19:00', i: 'rings', special: 1, es: 'Gran entrada de los novios', des: 'Entrada oficial de los novios y comienzo de la celebración.',
+    ar: 'الدخول الكبير للعروسين', dar: 'الدخول الرسمي للعروسين وانطلاق الحفل.' },
+  { t: '19:30', i: 'glasses', es: 'Cóctel de bienvenida', des: 'Servicio de entrantes, aperitivos y zumos para los invitados.',
+    ar: 'كوكتيل الترحيب', dar: 'تقديم المقبلات والمأكولات الخفيفة والعصائر للضيوف.' },
+  { t: '20:00', i: 'music', es: 'Música y bailes', des: 'Primer momento de celebración, música y baile junto a familiares y amigos.',
+    ar: 'موسيقى ورقص', dar: 'أولى لحظات الاحتفال، موسيقى ورقص مع الأهل والأحباب.' },
+  { t: '21:00', i: 'tayfor', special: 1, es: 'Presentación de los regalos de la novia', des: 'Entrada tradicional de los regalos de la novia (<i>Tayfors</i>), acompañada de música y celebración.',
+    ar: 'تقديم هدايا العروس', dar: 'الدخول التقليدي لهدايا العروس (الطيافر) على أنغام الموسيقى والفرح.' },
+  { t: '00:00', i: 'dinner', es: 'Cena de celebración', des: 'Servicio de la cena para todos los invitados.',
+    ar: 'عشاء الحفل', dar: 'تقديم العشاء لجميع الضيوف.' },
+  { t: '02:00', i: 'cake', special: 1, es: 'Gran entrada con el vestido de novia y corte de la tarta', des: 'Presentación de la novia con su vestido blanco, seguida del momento especial del corte de la tarta nupcial.',
+    ar: 'إطلالة العروس بالفستان الأبيض وقطع الكعكة', dar: 'ظهور العروس بفستانها الأبيض، تليه اللحظة المميزة لقطع كعكة الزفاف.' },
+  { t: '03:00', i: 'spark', es: 'Hora loca y despedida', des: 'Último momento de fiesta, música y diversión para despedir una noche inolvidable.',
+    ar: 'الهورا لوكا والوداع', dar: 'آخر لحظات الحفل، موسيقى ومرح لتوديع ليلة لا تُنسى.' },
+  { t: '04:00', i: 'moon', end: 1, es: 'Fin de la celebración', ar: 'نهاية الحفل' },
+];
+$('#prog').insertAdjacentHTML('beforeend', PROGRAM.map(e => `
+  <div class="pi reveal${e.special ? ' special' : ''}${e.end ? ' end' : ''}">
+    <div class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">${ICON[e.i]}</svg></div>
+    <div class="card">
+      ${e.special ? '<span class="tag">✦ Momento especial</span>' : ''}
+      <div class="time">${e.t}<small>h</small></div>
+      <div class="t-es">${e.es}</div>${e.des ? `<div class="d-es">${e.des}</div>` : ''}
+      <div class="ar-wrap" lang="ar"><div class="t-ar">${e.ar}</div>${e.dar ? `<div class="d-ar">${e.dar}</div>` : ''}</div>
+    </div>
+  </div>`).join(''));
 
 /* map */
 const q = encodeURIComponent(WEDDING.mapQuery);
@@ -741,7 +837,15 @@ function moveMarker() {
   marker.style.top = y + 'px';
   tl.querySelectorAll('.ev').forEach(ev => ev.classList.toggle('on', y >= ev.offsetTop + ev.offsetHeight / 2 - 10));
 }
-addEventListener('scroll', moveMarker, { passive: true }); addEventListener('resize', moveMarker); moveMarker();
+const prog = $('#prog'), pmarker = $('#pmarker');
+function moveProg() {
+  const r = prog.getBoundingClientRect();
+  const y = Math.min(r.height - 30, Math.max(30, innerHeight * .5 - r.top));
+  pmarker.style.top = y + 'px';
+  prog.querySelectorAll('.pi').forEach(pi => pi.classList.toggle('on', y >= pi.offsetTop + 30));
+}
+const onScroll = () => { moveMarker(); moveProg(); };
+addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll); onScroll();
 </script>
 </body>
 </html>
